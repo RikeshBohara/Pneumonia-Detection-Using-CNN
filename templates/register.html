@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penumonia Detector</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>
+        Pneumonia <span>Detection</span> using <span>Deep Learning</span>
+    </h1>
+    <div class="container2">
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <div class="forms">
+            <h2>Register</h2>
+            <form action="/register" method="POST">
+                <input type="text" id="name" name="name" placeholder="name" required>
+                <input type="email" id="email" name="email" placeholder="email" required>
+                <input type="text" id="username" name="username" placeholder="username" required>
+                <input type="password" id="password" name="password" placeholder="password" required>
+                <p>
+                    <input type="checkbox" onclick="toggle()">
+                    <strong>Show Password </strong>
+                </p>
+                <input type="submit" value="Register">
+                <p>Already have an account? <a href="/login">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function toggle() {
+            let temp = document.getElementById("password");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

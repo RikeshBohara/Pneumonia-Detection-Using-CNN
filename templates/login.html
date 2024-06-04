@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penumonia Detector</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftpart">
+            <h1>
+                Pneumonia <span>Detection</span> using <span>Deep Learning</span>
+            </h1><br>
+            <h3>A simple webapp to analyze your <span>chest x-ray</span> to predict if you have pneumonia or not.</h3>
+        </div>
+        <div class="rightpart">
+            <div class="login">
+                <h2>Login</h2>
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+                <div>
+                    <form action="/login" method="POST">
+                        <input type="text" id="username" name="username" placeholder="username" required>
+                        <input type="password" id="password" name="password" placeholder="password" required>
+                        <p>
+                            <input type="checkbox" onclick="toggle()">
+                            <strong>Show Password </strong>
+                        </p>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+                <p>Don't have an account? <a href="/register">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggle() {
+            let temp = document.getElementById("password");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

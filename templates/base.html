@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/" />
+    <title>{% block title %}Flask App{% endblock %}</title>
+    {% metaa %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    {% include 'header.html' %}
+    {% block content %}
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha384-EwI6FH8E2r6wFJdKhxajYB+n17l+Yt2k5M1WxFmdjT7v7PKecP2DtV5t2XiM" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-Y3I56gE18UJZG4Ire1b2W4hZ4rZnJzF6Xl/L84DnV9QrA/uQ1D4W094m3uLmD9L8" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-aMDLUo9Jz9fI40js/vNzG1pFKk+XJhz8Qsk7qG0pTJl1dTQn1NfH8Dm+j10D8lQz" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <footer class="bg-light py-3">
+        <div class="container-fluid">
+            <p class="text-center">Made with ❤ by Rikesh Bohara</p>
+        </div>
+    </footer>
+</body>
+</html>

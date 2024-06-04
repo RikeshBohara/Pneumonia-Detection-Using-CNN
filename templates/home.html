@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penumonia Detector</title>
+</head>
+<body>
+    <div class="contianer">
+        {% if username %}
+            {% include 'index.html' %}
+        {% else %}
+            {% include 'login.html' %}
+        {% endif %}
+    </div>
+</body>
+</html>
